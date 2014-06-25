@@ -1,7 +1,7 @@
 # sensu_dell
 
 This is a Sensu check (dell_check.rb) designed to verify status of several components of a dell server.  
-This removes the need to have NRPE (Nagios) installedi and wrapping a Perl script which wraps openmanage. Yo dawg, I heard you like wrapping..
+This removes the need to have NRPE (Nagios) installed and wrapping a Perl script which wraps openmanage. Yo dawg, I heard you like wrapping..
 
 ## Requirements
 
