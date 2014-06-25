@@ -38,7 +38,7 @@ For instance, create check /etc/sensu/conf.d/checks/dell_memory_check.json
 
 ## Plugin details
 
-This initial stab at a plugin using the period check method that is common in Nagios and Sensu.  We will eventually replace this for a local daemon that runs on an asset, and will send alarms directly through the client Sensu socket.  The framework for this daemon is forthcoming, but we'd like a local alarmbot that will listen to things like hardware events or syslog messages, and fire off notification on-demand rather than on a periodic schedule (push instead of poll).  We can add double-verification by including concurrent periodic polling as a point of parity with the push notifications.
+This initial stab at a plugin using the periodic check method that is common in Nagios and Sensu.  We will eventually replace this for a local daemon that runs on an asset, and will send alarms directly through the client Sensu socket.  The framework for this daemon is forthcoming, but we'd like a local alarmbot that will listen to things like hardware events or syslog messages, and fire off notification on-demand rather than on a periodic schedule (push instead of poll).  We can add double-verification by including concurrent periodic polling as a point of parity with the push notifications.
 
 ### Items Verified
 
