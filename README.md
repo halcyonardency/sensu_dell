@@ -2,29 +2,39 @@
 
 This is a Sensu check (dell_check.rb) designed to verify status of several components of a dell server.
 
+## Requirements
+
+This requires Dell Openmanage is installed. The command omreport must be in your path, or you can set a default binary path within a json blob.  
+Example: /etc/sensu/conf.d/dell_check.json
+> { "dell_check": { "binpath":"/path/to/openmanage"} }
+
 ## Installation
 
 Copy dell_check.rb to a friendly Sensu check execution path on all target assets.
 
-> mkdir -p /etc/sensu/plugins/hardware/
-> cp dell_check.rb /etc/sensu/plugins/hardware/dell_check.rb
-> chmod 755 /etc/sensu/plugins/hardware/dell_check.rb
+<pre>
+mkdir -p /etc/sensu/plugins/hardware/
+cp dell_check.rb /etc/sensu/plugins/hardware/dell_check.rb
+chmod 755 /etc/sensu/plugins/hardware/dell_check.rb
+</pre>
 
 ## Check Example
 
 For instance, create check /etc/sensu/conf.d/checks/dell_memory_check.json  
 
-> {
->  "checks": {
->    "dell_memory_check": {
-      "command": "/etc/sensu/plugins/hardware/dell_check.rb --memory",
->      "subscribers": [
->        "linuxhost"
->      ],
->      "interval": 15
->    }
->  }
-> }
+<pre>
+ {
+  "checks": {
+    "dell_memory_check": {
+     "command": "/etc/sensu/plugins/hardware/dell_check.rb --memory",
+      "subscribers": [
+        "linuxhost"
+      ],
+      "interval": 15
+    }
+  }
+ }
+</pre>
 
 ## Plugin details
 
