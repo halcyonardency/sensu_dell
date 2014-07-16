@@ -22,14 +22,12 @@ module Sensu
 
       def definition
         {
+	  :type => 'check',
           :name => name,
           :interval => options[:interval],
-          :standalone => true,
           :handler => options[:handler]
+          :standalone => true,
         }
-      end
-
-      def post_init
       end
 
       def run
