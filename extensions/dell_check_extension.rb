@@ -25,8 +25,8 @@ module Sensu
 	  :type => 'check',
           :name => name,
           :interval => options[:interval],
-          :handler => options[:handler]
-          :standalone => true,
+          :handler => options[:handler],
+          :standalone => true
         }
       end
 
